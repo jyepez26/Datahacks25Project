@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="song_gen.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Header content goes here -->
+        <h1>Lyrics Generator</h1>
+      </header>
+    <div class="information">
+        <p class="tutorial">Background Info</p>
+        <img class="vid" src="images\test.gif"></img>
+    </div>
+
+    <div class="h2info">
+        <div class="clusterHeader">
+            <h2>Clusters</h2>
+        </div>
+        <p>Choose the cluster you wish to use</p>
+    </div>
+    
+    <div class="clusters">
+        <button id="cluster" data-value="Cluster 1">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 1</button>
+        <button id="cluster" data-value="Cluster 2">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 2</button>
+        <button id="cluster" data-value="Cluster 3">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 3</button>
+        <button id="cluster" data-value="Cluster 4">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 4</button>
+        <button id="cluster" data-value="Cluster 5">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 5</button>
+        <button id="cluster" data-value="Cluster 6">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 6</button>
+        <button id="cluster" data-value="Cluster 7">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 7</button>
+        <button id="cluster" data-value="Cluster 8">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 8</button>
+        <button id="cluster" data-value="Cluster 9">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 9</button>
+        <button id="cluster" data-value="Cluster 10">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 10</button>
+        <button id="cluster" data-value="Cluster 1">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 11</button>
+        <button id="cluster" data-value="Cluster 2">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 12</button>
+        <button id="cluster" data-value="Cluster 3">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 13</button>
+        <button id="cluster" data-value="Cluster 4">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 14</button>
+        <button id="cluster" data-value="Cluster 5">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 15</button>
+        <button id="cluster" data-value="Cluster 6">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 16</button>
+        <button id="cluster" data-value="Cluster 7">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 17</button>
+        <button id="cluster" data-value="Cluster 8">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 18</button>
+        <button id="cluster" data-value="Cluster 9">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 19</button>
+        <button id="cluster" data-value="Cluster 10">
+            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
+        Cluster 20</button>
+    </div>
+
+
+    <div class="topicHeader">
+        <h2>Topics</h2>
+    </div>
+
+    <div class="inputs">
+        <div class="vals">
+            <label>Topic:</label>
+            <input id="topic"></input>
+        </div>
+        <div class="vals">
+            <label>Artist: </label>
+            <input id="artist"></input>
+        </div>
+        <div class="vals">
+            <label>Mood: </label>
+            <input id="mood"></input>
+        </div>
+    </div>
+
+    <div id="generate">
+        <button >Submit</button>
+    </div>
+    
+    <div class="generation">
+        <p>Generation</p>
+    </div>
+
+</body>
+</html>
