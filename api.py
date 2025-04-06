@@ -15,7 +15,7 @@ async def read_form(request: Request):
 @app.post("/submit")
 async def handle_form(
     topic: str = Form(...),
-    artist: str = Form(...),
+    clusterSelected: str = Form(...),
     mood: str = Form(...)
 ):
     # Example: Use the double function for fun
@@ -23,7 +23,7 @@ async def handle_form(
     return {
         "received": {
             "topic": topic,
-            "artist": artist,
+            "clusterSelected": clusterSelected,
             "mood": mood
         },
         "doubled_topic": doubled_topic

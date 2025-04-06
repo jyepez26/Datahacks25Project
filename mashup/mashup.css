@@ -1,9 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: sans-serif;
-    padding: 20px;
+    --color-accent: oklch(0.72 0.2302 13.76);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+/* Set the margin and padding of the header to 0 */
+header {
+    margin: 5;
+    padding: 5;
+    /* Set the height of the header to 100% of the viewport height */
+    background-color: #f2f2f2;
+}
+
+.nav {
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid black;
+    --color-accent: oklch(0.72 0.2302 13.76);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+.nav > a:hover {
+    --color-accent: oklch(0.72 0.2302 13.76);
+    border-width: 1px;
+    border-bottom-width: 5px;
+    border-bottom-color: var(--color-accent);
+    border-bottom-style: solid;
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 60px;
+    background-color: oklch(0.72 0.2302 13.76);
+    margin: 5;
+}
+
+.information {
+    display : grid;
+    grid-template-columns: 4fr 1fr;  
+    margin: 5px;
+}
+
+.tutorial {
+    border: 1px solid black;
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin: 5;
+    margin-top: 10px;
+}
+
+.clusterHeader {
+    background-color: oklch(0.72 0.2302 13.76);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 40px;
 }
 
 .ruler {
+    margin-left: 10px;
     position: relative;
     height: 20px;
     border-bottom: 1px solid #ccc;
@@ -19,6 +87,7 @@ body {
 
 .track {
     position: relative;
+    margin-left: 10px;
     height: 150px;
     border: 1px solid black;
     margin-bottom: 20px;
@@ -44,6 +113,7 @@ body {
 }
 
 #controls {
+    margin-left: 10px;
     margin-top: 20px;
 }
 

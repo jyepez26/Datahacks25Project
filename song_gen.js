@@ -1,17 +1,4 @@
-let clusters = {
-    "cluster1" : "",
-    "cluster2" : "",
-    "cluster3" : "",
-    "cluster4" : "",
-    "cluster5" : "",
-    "cluster6" : "",
-    "cluster7" : "",
-    "cluster8" : "",
-    "cluster9" : "",
-    "cluster10" : ""
-};
-
-let clusterSelected = "Cluster 1";
+let clusterSelected = "Electronic";
 
 async function loadData() {
     selectedButton(clusterSelected);
@@ -22,36 +9,43 @@ async function loadData() {
 function selectedButton(selected) {
     clusterSelected = selected;
     console.log("Currently Selected" )
-    d3.selectAll("#cluster").classed("current", false);
+    d3.selectAll("#cluster-button").classed("current", false);
     d3.select(`[data-value='${clusterSelected}']`).classed("current", true);
 }
 
 //Check when submit button is clicked
 //Get values from selected button and input area
 
-function generateLyrics() {
-
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
 });
 
-let clusterCheck = document.getElementById('.cluster');
+let clusterCheck = document.getElementById('#cluster-button');
 let generateCheck = document.getElementById('.generate');
 
-d3.selectAll("#cluster").on("click", function() {
+d3.selectAll("#cluster-button").on("click", function() {
     const selectedCluster = d3.select(this).attr("data-value");
     console.log("Selected Cluster");
     console.log(selectedCluster);
     selectedButton(selectedCluster);
 });
 
-d3.selectAll("#generate").on("click", function() {
-    topicValue = document.getElementById('topic').value;
-    artistValue = document.getElementById('artist').value;
-    moodValue = document.getElementById('mood').value;
+d3.selectAll("#generate").on("click", async () => {
+    const topicValue = document.getElementById('topic');
+    const moodValue = document.getElementById('mood').value;
 
-    generateLyrics(topicValue, artistValue, moodValue);
+    const formData = new FormData();
+    formData.append("topic", topicValue);
+    formData.append("clusterSelected", clusterSelected);
+    formData.append("mood", moodValue);
+
+    const response = await fetch("http://127.0.0.1:8000/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+    console.log(result);  // Or display on the page
+    alert("Doubled topic: ${result.doubled_topic}");
 });
   

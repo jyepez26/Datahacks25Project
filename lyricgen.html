@@ -13,8 +13,8 @@
     <header>
         <!-- Header content goes here -->
         <div class="nav">
-            <nav href=..\lyricgen.html>Lyric Generation</nav>
-            <nav href=..\mashup.html>Mashup</nav>
+            <a href=..\lyricgen.html>Lyric Generation</a>
+            <a href=..\mashup\mashup.html>Mix & Mashup</a>
         </div>
         <h1>Lyrics Generator</h1>
     </header>
@@ -25,30 +25,47 @@
 
     <div class="h2info">
         <div class="clusterHeader">
-            <h2>Clusters</h2>
+            <h2>Genres</h2>
         </div>
-        <p>Choose the cluster you wish to use</p>
     </div>
     
     <div class="clusters">
-        <button id="cluster" data-value="Cluster 1">
-            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
-        Cluster 1</button>
-        <button id="cluster" data-value="Cluster 2">
-            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
-        Cluster 2</button>
-        <button id="cluster" data-value="Cluster 3">
-            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
-        Cluster 3</button>
-        <button id="cluster" data-value="Cluster 4">
-            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
-        Cluster 4</button>
-        <button id="cluster" data-value="Cluster 5">
-            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
-        Cluster 5</button>
-        <button id="cluster" data-value="Cluster 6">
-            <img src="images\Screenshot 2024-05-21 225852.png" alt="buttonpng">            
-        Cluster 6</button>
+        <button id="cluster-button" data-value="Electronic">
+            <img src="images\electronic.jpeg" alt="electronicpng">  
+            <span>Electronic</span>          
+        </button>
+        <button id="cluster-button" data-value="Rap">
+            <img src="images\rap.png" alt="rappng">            
+            <span>Rap</span>
+        </button>
+        <button id="cluster-button" data-value="Hip-Hop">
+            <img src="images\hip-hop.jpg" alt="hiphoppng">            
+            <span>Hip-Hop</span>
+        </button>
+        <button id="cluster-button" data-value="Pop">
+            <img src="images\pop.jpg" alt="poppng">            
+            <span>Pop</span>
+        </button>
+        <button id="cluster-button" data-value="R&B">
+            <img src="images\r&b.jpg" alt="r&bpng">            
+            <span>R&B</span>
+        </button>
+        <button id="cluster-button" data-value="Rock">
+            <img src="images\rock.jpg" alt="rockpng">            
+            <span>Rock</span>
+        </button>
+        <button id="cluster-button" data-value="Alternative Rock">
+            <img src="images\altrock.png" alt="altrockpng">            
+            <span>Alternative Rock</span>
+        </button>
+        <button id="cluster-button" data-value="Country">
+            <img src="images\country.jpg" alt="countrypng">            
+            <span>Country</span>
+        </button>
+        <button id="cluster-button" data-value="Soul">
+            <img src="images\soul.jpg" alt="soulpng">            
+            <span>Soul</span>
+        </button>
     </div>
 
 
@@ -62,21 +79,22 @@
             <input id="topic"></input>
         </div>
         <div class="vals">
-            <label>Artist: </label>
-            <input id="artist"></input>
-        </div>
-        <div class="vals">
-            <label>Mood: </label>
-            <input id="mood"></input>
+            <label>Choose a mood: </label>
+            <select id="mood" name="moodDrop">
+                <option value="upbeat">Upbeat</option>
+                <option value="melancholy" selected>Melancholy</option>
+            </select>
         </div>
     </div>
 
     <div id="generate">
-        <button >Submit</button>
+        <button>Click to Generate</button>
     </div>
     
     <div class="generation">
-        <p>Generation</p>
+        <div class="generationHeader">
+            <h2>Generation</h2>
+        </div>
     </div>
 
 </body>
