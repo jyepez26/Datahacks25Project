@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Audio Editor</title>
+  <link rel="stylesheet" href="mashup.css">
+</head>
+<body>
+  <h2>Mini Audio Editor</h2>
+  <div>
+    <input type="file" id="fileUploader" accept="audio/mp3" multiple>
+    <select id="audioDropdown"></select>
+    <button id="addTrackBtn" onclick="addTrack()" style="display: none;">Add Track</button>
+  </div>
+
+  <div class="ruler" id="ruler"></div>
+  <div id="trackContainer"></div>
+
+  <div id="controls">
+    <button onclick="playMix()">Play Mix</button>
+    <button onclick="stopMix()">Stop Mix</button>
+
+  </div>
+
+  <div id="contextMenu" class="context-menu"></div>
+
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="mashup.js"></script>
+</body>
+</html>
