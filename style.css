@@ -1,0 +1,139 @@
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Set the margin and padding of the header to 0 */
+header {
+    margin: 5;
+    padding: 5;
+    /* Set the height of the header to 100% of the viewport height */
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    background-color: lightblue;
+    margin: 5;
+}
+
+.information {
+    display : grid;
+    grid-template-columns: 4fr 1fr;  
+    margin: 5px;
+}
+
+.tutorial {
+    border: 1px solid black;
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin: 5;
+    margin-top: 10px;
+}
+
+
+.topicHeader {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+.clusterHeader {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+.clusters {
+    display : grid;
+    grid-template-columns: 2 / 5;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 5px;
+}
+
+.clusters > button {
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+    border-width: 0px;
+    background-color: transparent;
+
+    img {
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+      }
+}
+
+.clusters > button:hover {
+    --color-accent: oklch(67.11% 0.2039 164.12);
+    border-width: 1px;
+    border-bottom-width: 5px;
+    border-bottom-color: var(--color-accent);
+    border-bottom-style: solid;
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clusters > button.current {
+    --color-accent: oklch(0.7 0.1743 227.65);
+    border-width: 1px;
+    border-bottom-width: 5px;
+    border-bottom-color: var(--color-accent);
+    border-bottom-style: solid;
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+    font-weight: bold;
+}
+
+.inputs {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers .vals blocks horizontally */
+    gap: 10px;
+}
+
+.vals {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+}
+
+label {
+    min-width: 60px; /* keeps labels aligned */
+    text-align: right;
+}
+
+input {
+    padding: 4px 8px;
+    width: 200px;
+}
+
+.generation {
+    font-size : 20px;
+    text-align: center;
+}
+
+
+#generation {
+    border: 1px solid black;
+    height: 200px;
+    position: relative;
+    font-size: 20px; 
+}
+
+#generation button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
