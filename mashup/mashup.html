@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mini Audio Editor</title>
+  <title>Mashup </title>
   <link rel="stylesheet" href="mashup.css">
 </head>
 <body>
+  <header>
+    <!-- Header content goes here -->
+    <div class="nav">
+        <nav href=..\lyricgen.html>Lyric Generation</nav>
+        <nav href=..\mashup.html>Mashup</nav>
+    </div>
+    <h1>Lyrics Generator</h1>
+  </header>
+
   <h2>Mini Audio Editor</h2>
   <div>
     <input type="file" id="fileUploader" accept="audio/mp3" multiple>
@@ -19,7 +28,7 @@
   <div id="controls">
     <button onclick="playMix()">Play Mix</button>
     <button onclick="stopMix()">Stop Mix</button>
-
+    <button onclick="downloadMix()">Download Mix</button>
   </div>
 
   <div id="contextMenu" class="context-menu"></div>
